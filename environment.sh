@@ -26,7 +26,7 @@ echo ''
 
 sudo apt update && sudo apt upgrade
 
-sudo apt-get install apache2 php7.0 mysql-server php7.0-mysql php7.0-gd php7.0-xml mysql-workbench
+sudo apt-get install apache2 php7.0 mysql-server php7.0-mysql php7.0-gd php7.0-xml libapache2-mod-php7.0 mysql-workbench 
 
 
 
