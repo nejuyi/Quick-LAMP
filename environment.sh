@@ -15,10 +15,12 @@ echo 'Telegram'
 echo 'Fonts hack ttf'
 echo 'Unity tweak tool'
 echo 'Psensor'
-echo 'Git'
+echo 'Git & Git Flow'
+echo 'Meld ( Merge tool )'
 echo 'NodeJS'
 echo 'Built Essential'
-echo ''
+echo 'Keepassx'
+echo 'Xclip'
 echo ''
 echo '-----------------------------------------------------------------------------------'
 echo ''
@@ -26,13 +28,10 @@ echo ''
 
 sudo apt update && sudo apt upgrade
 
-sudo apt-get install apache2 php7.0 mysql-server php7.0-mysql php7.0-gd php7.0-xml libapache2-mod-php7.0 mysql-workbench 
-
-
+sudo apt-get install apache2 php7.0 mysql-server php7.0-mysql php7.0-gd php7.0-xml mysql-workbench libapache2-mod-php7.0
 
 #VIM installer
  sudo apt-get instal vim
-
 
 # #SUBLIME TEXT INSTALLER
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -40,7 +39,6 @@ sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
-
 
 #CHROMIUN BROWSER
 sudo apt-get install chromium-browser
@@ -69,6 +67,8 @@ sudo apt-get install unity-tweak-tool
 sudo apt-get install psensor
 
 sudo apt-get install git
+sudo apt-get install git-flow
+sudo apt-get install meld
 
 sudo apt-get install curl
 
@@ -77,6 +77,16 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential
 
+#KEEPASSX
+sudo apt-get install keepassx
+#Xclip
+sudo apt-get install xclip
+
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+cd ~/.ssh
+ssh-keygen -t rsa
+cd ~
 
 
 sudo apt-get autoremove
