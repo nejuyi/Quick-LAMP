@@ -21,14 +21,15 @@ echo 'NodeJS'
 echo 'Built Essential'
 echo 'Keepassx'
 echo 'Xclip'
-echo ''
+echo 'GIMP'
+echo 'Composer'
 echo '-----------------------------------------------------------------------------------'
 echo ''
 echo ''
 
 sudo apt update && sudo apt upgrade
 
-sudo apt-get install apache2 php7.0 mysql-server php7.0-mysql php7.0-gd php7.0-xml mysql-workbench libapache2-mod-php7.0
+sudo apt-get install apache2 php7.0 mysql-server php7.0-mysql php7.0-gd php7.0-xml php7.0-json php7.0-mbstring mysql-workbench libapache2-mod-php7.0
 
 #VIM installer
  sudo apt-get instal vim
@@ -82,11 +83,16 @@ sudo apt-get install keepassx
 #Xclip
 sudo apt-get install xclip
 
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-cd ~/.ssh
-ssh-keygen -t rsa
+#GIMP
+sudo apt-get install gimp
+
+#composer
 cd ~
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/bin/composer 
 
 
 sudo apt-get autoremove
